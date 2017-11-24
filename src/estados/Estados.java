@@ -5,8 +5,9 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.*;
 
-public class Estados extends StateBasedGame {
 
+public class Estados extends StateBasedGame {
+	
 	private AppGameContainer contenedor;
 	public Estados()throws SlickException {
 		super("TomiFlow");
@@ -21,7 +22,7 @@ public class Estados extends StateBasedGame {
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
 		// TODO Auto-generated method stub
-		this.addState(new Juego());
+		this.addState(new Imagen());//aquí indicamos que estado cargar
 
 	}
 
