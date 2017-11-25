@@ -19,17 +19,21 @@ public class Estados extends StateBasedGame {
 /**
  * Inicializa la lista de los estados del juego
  */
+	   public static final int MAINMENUSTATE         = 0;
+	   public static final int GAMEPLAYSTATE         = 1;
+	   public static final int LEVELSELECTSTATE      = 2;
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
 		// TODO Auto-generated method stub
-		this.addState(new Imagen());//aquí indicamos que estado cargar
 
+		
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		try {
-			Estados juego = new Estados();
+		 new Estados();
+		 
 		} catch(SlickException slick) {
 			slick.printStackTrace();
 			System.exit(1);
