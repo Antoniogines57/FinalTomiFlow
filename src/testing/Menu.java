@@ -23,10 +23,12 @@ public class Menu extends BasicGameState{
 	}
 	
 	public void update(GameContainer gc, StateBasedGame sbg, int delta) throws SlickException{
+		Input input = gc.getInput();
 		int xpos = Mouse.getX();
 		int ypos = Mouse.getY();
 		mousePosX = "Mouse Position X: " + xpos;
 		mousePosY = "Mouse Position Y: " + ypos;
+		if (input.isMouseButtonDown(0) && NewTest.RectObjLocked(250, 170, 115, 30)) sbg.enterState(1);
 	}
 	
 	public int getID(){
