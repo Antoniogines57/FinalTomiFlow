@@ -1,6 +1,6 @@
-/bin/
-.classpath
-.project
-.InterestingLinks
-lib
-bin
+bin/
+/.classpath
+/.project
+/.gitignore
+lib/
+bin/
