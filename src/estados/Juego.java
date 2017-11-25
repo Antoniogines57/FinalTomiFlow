@@ -1,5 +1,9 @@
 package estados;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -9,6 +13,8 @@ import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
+
+import main.Main;
 
 public class Juego extends BasicGameState {
 
@@ -24,7 +30,7 @@ public class Juego extends BasicGameState {
         this.circulo = new Circle(100, 100, 7);
 
 	}
-
+	
 	@Override
 	public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
 		//Dibuja
@@ -70,6 +76,18 @@ public class Juego extends BasicGameState {
    
 	}
 
+	public static void main(String[] args) {
+		try{
+            AppGameContainer appgc = new AppGameContainer(new Main("Formas y figuras"));
+            appgc.setDisplayMode(640, 480, false);
+            appgc.start();
+        }
+        catch (SlickException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+	}
+	
 	@Override
 	public int getID() {
 		/*
@@ -88,9 +106,6 @@ public class Juego extends BasicGameState {
 	
 	
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 }
