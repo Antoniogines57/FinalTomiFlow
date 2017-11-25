@@ -17,20 +17,20 @@ public class NewTest extends StateBasedGame{
 		return false;
 	}
 	
-	public static final String gameName = "Test game";
-	public static final int menu = 0;
+	public static final String gameName = "Test game";	// Titulo de la ventana
+	public static final int menu = 0;		// Definimos un par de estados para el juego "menu" y "play"
 	public static final int play = 1;
 	
 	public NewTest(String gameName) {
 		super(gameName);
-		this.addState(new Menu(menu));
+		this.addState(new Menu(menu));			// Agregamos los estados
 		this.addState(new Play(play));
 	}
 	
 	public void initStatesList(GameContainer gc) throws SlickException {
-		this.getState(menu).init(gc, this);
-		this.getState(play).init(gc, this);
-		this.enterState(menu);
+		this.getState(menu).init(gc, this);		// Inicializamos los estados
+		this.getState(play).init(gc, this);		
+		this.enterState(menu);					// Estado "menu" por defecto
 	}
 	
 	public static void main(String[] args) {
