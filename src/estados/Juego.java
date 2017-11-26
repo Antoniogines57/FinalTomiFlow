@@ -18,7 +18,7 @@ import main.Main;
 
 public class Juego extends BasicGameState {
 
-	public Juego() {
+	public Juego(int state) {
 		// TODO Auto-generated constructor stub
 	}
     private Rectangle rectangulo = null;
@@ -96,7 +96,7 @@ public class Juego extends BasicGameState {
 		 * Cada estado debe de tener asociado un entero, da igual cómo se haga
 		 * 
 		 */
-		return 0;
+		return 1;
 	}
     public static void randomPos(Circle circulo) {			// Una funcion que asigna una posicion aleatorio al circulo dado en el argumento
     	circulo.setX((float) (Math.random()*480));
